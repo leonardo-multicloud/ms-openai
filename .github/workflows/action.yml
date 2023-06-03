@@ -30,6 +30,6 @@ jobs:
           dockerfile: ${{ env.DOCKERFILE }}
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
-          repository: ${{ secrets.DOCKER_USERNAME }}/ms-openai
+          repository: ${{ secrets.DOCKER_USERNAME }}/${{ env.APP_NAME}}
           push: true
           tags: ${{ github.sha }}, latest
