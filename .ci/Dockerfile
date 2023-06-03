@@ -2,8 +2,8 @@ FROM golang:1.20 as build
 
 WORKDIR /app
 
-COPY ../src .
-COPY ../. .
+COPY src/ .
+COPY . .
 
 RUN CGO_ENABLED=0 GOOS=linux go build -o server
 
